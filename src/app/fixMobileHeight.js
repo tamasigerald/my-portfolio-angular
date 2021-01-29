@@ -6,18 +6,19 @@ const setHeight = () => {
 
     for (const element of elements) {
         element.style.height = `${height}px`;
-        console.log(element);
     }
 
     const mobileMenu$$ = document.querySelector('.mobile__menu');
     mobileMenu$$.style.height = `${height - 70}px`;
 }
 
-window.addEventListener('resize', () => {
+if (typeof window !== "undefined") {
+  window.addEventListener('resize', () => {
     setHeight();
-})
+  })
 
-window.onload = () => {
+  window.onload = () => {
     setHeight();
-    console.log(window.innerHeight);
+  }
+
 }
