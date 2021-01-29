@@ -13,11 +13,15 @@ const setHeight = () => {
     mobileMenu$$.style.height = `${height - 70}px`;
 }
 
-window.addEventListener('resize', () => {
-    setHeight();
-})
 
-window.onload = () => {
-    setHeight();
-    console.log(window.innerHeight);
+if (typeof window !== "undefined") {
+    window.addEventListener('resize', () => {
+        setHeight();
+    })
+    
+    window.onload = () => {
+        setHeight();
+        console.log(window.innerHeight);
+    }
+    
 }

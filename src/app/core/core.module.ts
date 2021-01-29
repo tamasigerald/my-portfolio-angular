@@ -11,7 +11,9 @@ import { BackgroundComponent } from './components/background/background.componen
   declarations: [HeaderComponent, FooterComponent, BackgroundComponent],
   imports: [
     CommonModule,
-    RouterModule.forRoot([])
+    RouterModule.forRoot([], {
+    initialNavigation: 'enabled'
+})
   ],
   exports: [
     HeaderComponent,

@@ -12,7 +12,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     AppComponent
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     AppRoutingModule,
     CoreModule,
     FontAwesomeModule
