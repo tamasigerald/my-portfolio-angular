@@ -1,0 +1,12 @@
+<section class="content">
+  <header class="content__title">
+    <h1 class="title__text">Web Developer<span class="text--point">.</span></h1>
+    <h3 class="title__subtext">Curious by heart, creative and passionate</h3>
+    <div class="techs">
+      <div class="icon__container" *ngFor="let icon of icons">
+        <fa-icon class="icon" [icon]="icon.icon"></fa-icon>
+        <div class="icon__tooltip">{{icon.name}}</div>
+      </div>
+    </div>
+  </header>
+</section>

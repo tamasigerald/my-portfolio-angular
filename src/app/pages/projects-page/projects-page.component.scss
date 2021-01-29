@@ -1,0 +1,21 @@
+@import '../../shared/styles/styles.import.scss';
+
+.title {
+    &__text, &__subtext {
+        text-align: center;
+        color: $c-gold;
+    }
+    &__text {
+        font-size: 10rem;
+        font-weight: $w-bold;
+    }
+    &__subtext {
+        font-size: 3rem;
+        font-weight: $w-medium;
+    }
+
+}
+
+.text--point {
+    color: $c-white;
+}

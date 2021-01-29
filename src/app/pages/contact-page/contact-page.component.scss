@@ -1,0 +1,78 @@
+@import '../../shared/styles/styles.import.scss';
+
+.content {
+    height: calc(60vh - 40px);
+    width: calc(50vw - 40px);
+    top: 25%;
+    left: 5%;
+    position: absolute;
+    // text-align: end;
+    color: $c-gold;
+    &__container {
+        // padding-bottom: 30rem;
+        font-size: 2.2rem;
+        line-height: 3.5rem;
+    }
+    // background-color: royalblue;
+}
+
+.title {
+    &__text {
+        font-size: 20rem;
+        font-weight: $w-bold;
+        margin: 0;
+        @include fadeInAnimation(fadeIn, 2s, ease);
+    }
+    &__subtext {
+        font-size: 3.5rem;
+        font-weight: $w-regular;
+        margin: 0;
+        margin-bottom: 15rem;
+        @include fadeInAnimation(fadeInRight, 2s, ease);
+    }
+}
+
+.mail {
+    color: $c-gray;
+    text-decoration: none;
+    position: fixed;
+    bottom: 10rem;
+    @include fadeInAnimation(fadeInRight, 2.2s, ease);
+    transition: all 0.2s;
+    &:hover {
+        color: $c-gold;
+    }
+}
+
+
+.text--medium {
+    font-weight: $w-medium;
+}
+
+.text--point {
+    color: $c-white;
+}
+
+@include mobile {
+    .title {
+        &__text {
+            font-size: 16rem;
+        }
+        &__subtext {
+            font-size: 3rem;
+            margin-bottom: 15rem;
+        }   
+    }
+}
+
+@include s-mobile {
+    .title {
+        &__text {
+            font-size: 14rem;
+        }
+        &__subtext {
+            font-size: 2.2rem;
+            margin-bottom: 10rem;
+        }   
+    }
+}

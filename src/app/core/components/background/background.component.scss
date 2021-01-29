@@ -1,0 +1,115 @@
+@import '../../../shared/styles/styles.import.scss';
+
+.bg-container {
+    position: absolute;
+    background-color: #000;
+    height: calc(100vh - 40px);
+    width: calc(100vw - 40px);
+    z-index: -1;
+}
+
+@include tablet {
+    .bg-container {
+        width: 100vw;
+    }
+}
+
+.portrait {
+    background-position: center;
+    background-size: cover;
+    transform: translate(-50%, -50%);
+    box-shadow: inset 0px 0px 400px 250px rgba($color: #000000, $alpha: 0.5);
+    background-color: $c-gray;
+    @include fadeInAnimation(fadeIn, 0.5s, ease);
+    &--home {
+        background-image: url('../../../../assets/images/funny-me.jpg');
+        height: 700px;
+        width: 500px;
+        top: 50%;
+        left: 50%;
+        &2 {
+            height: 200px;
+            width: 200px;
+            top: 35%;
+            left: 20%;
+            font-size: 3rem;
+        }
+        &3 {
+            height: 200px;
+            width: 200px;
+            top: 50%;
+            left: 15%;
+            font-size: 3rem;
+        }
+        &4 {
+            height: 200px;
+            width: 200px;
+            top: 65%;
+            left: 80%;
+            font-size: 3rem;
+        }
+        &5 {
+            height: 200px;
+            width: 200px;
+            top: 80%;
+            left: 85%;
+            font-size: 3rem;
+        }
+    }
+    &--about {
+        background-image: url('../../../../assets/images/avatar.jpg');
+        height: 600px;
+        width: 400px;
+        top: 45%;
+        left: 20%;
+        &2 {
+            background-image: url('../../../../assets/images/hobby-2.jpg');
+            height: 400px;
+            width: 250px;
+            top: 60%;
+            left: 35%;
+
+        }
+    }
+    &--contact {
+        background-image: url('../../../../assets/images/avatar.jpg');
+        height: 600px;
+        width: 500px;
+        top: 45%;
+        left: 75%;
+    }
+}
+
+@include tablet {
+    .portrait {
+        &--home {
+            // height: 70vh;
+            width: 100vw;
+            &2, &3, &4, &5 {
+            display: none;
+        }
+        }
+    }
+}
+
+@include phablet {
+    .portrait {
+        &--home {
+            height: 70vh;
+        }
+        &--about {
+            height: 600px;
+            width: 400px;
+            top: 50%;
+            left: 45%;
+            &2 {
+                top: 70%;
+                left: 70%;
+            }
+        }
+        &--contact {
+            height: 450px;
+            width: 400px;
+        }
+    }
+}

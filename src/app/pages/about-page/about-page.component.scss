@@ -1,0 +1,101 @@
+@import '../../shared/styles/styles.import.scss';
+
+.content {
+    height: calc(60vh - 40px);
+    width: calc(50vw - 40px);
+    top: 25%;
+    right: 8%;
+    position: absolute;
+    color: $c-gold;
+    &__container {
+        padding-bottom: 8rem;
+        font-size: 2.2rem;
+        line-height: 3.5rem;
+        p {
+            padding: 0.5rem 0; 
+        }
+    }
+}
+
+.title {
+    &__text {
+        font-size: 12rem;
+        font-weight: $w-bold;
+        margin: 0;
+        @include fadeInAnimation(fadeInLeft, 1.5s, ease);
+    }
+    &__subtext {
+        font-size: 4rem;
+        font-weight: $w-medium;
+        margin: 0;
+        margin-bottom: 35rem;
+        @include fadeInAnimation(fadeInRight, 1.5s, ease);
+    }
+}
+
+@include tablet {
+    .content {
+        top: 30%;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 90%;
+        &__container {
+            p {
+                background-color: $c-black;
+            }
+        }
+    }
+
+    .title {
+        &__text {
+            font-size: 10rem;
+            margin-bottom: 3rem;
+        }
+    }
+}
+
+@include desktop {
+    .title {
+        &__text {
+            font-size: 10rem;
+        }
+    }
+}
+
+@include phablet {
+    .title {
+        &__text {
+            font-size: 8rem;
+        }
+        &__subtext {
+            font-size: 3rem;
+        }
+    }
+}
+
+@include mobile {
+    .title {
+        &__text {
+            font-size: 6rem;
+        }
+    }
+}
+
+@include s-mobile {
+    .title {
+        &__text {
+            font-size: 5rem;
+        }
+        &__subtext {
+            font-size: 2.5rem;
+        }
+    }
+}
+
+.text--medium {
+    font-weight: $w-medium;
+}
+
+.text--point {
+    color: $c-white;
+}

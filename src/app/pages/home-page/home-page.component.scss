@@ -1,0 +1,106 @@
+@import '../../shared/styles/styles.import.scss';
+
+.content {
+    &__title {
+        width: 100%;
+    }
+}
+
+.title {
+    &__text, &__subtext {
+        text-align: center;
+        color: $c-gold;
+    }
+    &__text {
+        font-size: 10rem;
+        font-weight: $w-bold;
+        width: 100%;
+        margin: 0px 0;
+        @include fadeInAnimation(fadeInRight, 2s, ease);
+    }
+    &__subtext {
+        font-size: 3rem;
+        font-weight: $w-medium;
+        @include fadeInAnimation(fadeInLeft, 1.5s, ease);
+    }
+    
+}
+
+.text--point {
+    color: $c-white;
+}
+
+.techs {
+    @include flexCenter(row);
+    text-align: center;
+    position: relative;
+    @include fadeInAnimation(fadeIn, 2s, ease);
+}
+
+.icon {
+    color: $c-gold;
+    font-size: 4rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: color 0.2s;
+    &:hover + .icon__tooltip {
+        opacity: 1;
+        visibility: visible;
+    }
+    &:hover {
+        // transform: scale(1.2, 1.2);
+        color: $c-white;
+    }
+}
+
+.icon__tooltip {
+    opacity: 0;
+    position: absolute;
+    bottom: -4rem;
+    left: 50%;
+    transform: translateX(-50%);
+    transition: all 0.2s;
+}
+
+
+@include phablet {
+    .title {
+        &__text {
+            font-size: 7rem;
+        }
+        &__subtext {
+            font-size: 2.4rem;
+        }
+    }
+    .icon {
+        font-size: 3rem;
+    }
+}
+
+@include mobile {
+    .title {
+        &__text {
+            font-size: 5rem;
+        }
+        &__subtext {
+            font-size: 2rem;
+        }
+    }
+    .icon {
+        font-size: 2.8rem;
+    }
+}
+
+@include s-mobile {
+    .title {
+        &__text {
+            font-size: 4.5rem;
+        }
+        &__subtext {
+            font-size: 1.8rem;
+        }
+    }
+    .icon {
+        font-size: 2.5rem;
+    }
+}

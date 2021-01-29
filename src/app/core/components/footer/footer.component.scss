@@ -1,0 +1,26 @@
+@import '../../../shared/styles/styles.import.scss';
+
+.footer {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    bottom: 0;
+    height: 70px;
+    width: 100vw;
+    .nav__footer {
+        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        top: 0;
+        height: 50px;
+        width: calc(100% - 40px);
+    }
+}
+
+@include s-mobile {
+    .nav__link{
+        font-size: 1.6rem;
+    }
+}

@@ -1,0 +1,17 @@
+<header class="header">
+  <nav class="nav">
+    <div class="nav__logo"><a routerLink='/' class="nav__link nav__link--logo" >Gerald Tamasi</a></div>
+    <div class="nav__menu">
+      <a class="nav__link nav__link--header" routerLink="/about" routerLinkActive="nav__link--active">About</a>
+      <a class="nav__link nav__link--header" routerLink="/projects" routerLinkActive="nav__link--active">Projects</a>
+      <a class="nav__link nav__link--header" routerLink="/contact" routerLinkActive="nav__link--active">Contact</a>
+    </div>
+    <div class="mobile__menu" [ngClass]="menuStatus ? 'mobile__menu--active' : ''">
+      <a class="nav__link nav__link--header" routerLink="/about" routerLinkActive="nav__link--active" (click)="toggleMobileMenu()">About</a>
+      <a class="nav__link nav__link--header" routerLink="/projects" routerLinkActive="nav__link--active" (click)="toggleMobileMenu()">Projects</a>
+      <a class="nav__link nav__link--header" routerLink="/contact" routerLinkActive="nav__link--active" (click)="toggleMobileMenu()">Contact</a>
+    </div>
+    <div class="mobile__burger" (click)="toggleMobileMenu()" [ngClass]="menuStatus ? 'mobile__burger--active' : ''">
+    </div>
+  </nav>
+</header>

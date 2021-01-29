@@ -1,0 +1,26 @@
+@import './shared/styles/styles.import.scss';
+
+.content {
+    position: absolute;
+    width: calc(100vw - 40px);
+    height: calc(100vh - 40px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    overflow-x: hidden;
+    /* this will hide the scrollbar in mozilla based browsers */
+    overflow: -moz-scrollbars-none;
+    /* this will hide the scrollbar in internet explorers */
+    -ms-overflow-style: none;
+    &::-webkit-scrollbar {
+        width: 0 !important;
+        display: none;
+    }
+}
+
+@include tablet {
+    .content {
+        width: 100vw;
+    }
+}

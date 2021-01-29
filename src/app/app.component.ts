@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import './fixMobileHeight.js';
 
 @Component({
   selector: 'app-root',
