@@ -19,3 +19,15 @@
 .text--point {
     color: $c-white;
 }
+
+.mail {
+    color: $c-gold;
+    text-decoration: none;
+    // position: fixed;
+    // bottom: 10rem;
+    @include fadeInAnimation(fadeInRight, 2.2s, ease);
+    transition: all 0.2s;
+    &:hover {
+        color: $c-yellow;
+    }
+}
